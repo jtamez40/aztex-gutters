@@ -11,6 +11,7 @@ export default function Navbar() {
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/services">Services</Link></li>
+        <li><Link to="/gallery">Gallery</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>

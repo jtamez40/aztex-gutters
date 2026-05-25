@@ -629,3 +629,103 @@ footer { background: #0a0a0a; color: #aaa; padding: 3rem 2rem 1.5rem; }
   .cta-banner { padding: 2rem 1.5rem; }
   .cta-banner h2 { font-size: 22px; }
 }
+
+/* =====================
+   GALLERY PAGE
+   ===================== */
+
+/* Page hero */
+.gallery-hero {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 56px 2rem 48px;
+  border-bottom: 3px solid var(--aqua);
+}
+.gallery-hero .section-label { color: var(--aqua); margin-bottom: 0.5rem; }
+.gallery-hero-title {
+  font-size: 38px;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+.gallery-hero-desc {
+  font-size: 15px;
+  color: #aaa;
+  font-family: sans-serif;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Masonry / puzzle grid via CSS columns */
+.gallery-masonry {
+  column-count: 3;
+  column-gap: 6px;
+  padding: 6px;
+  background: #111;
+}
+.gallery-item {
+  display: block;
+  break-inside: avoid;
+  margin-bottom: 6px;
+  cursor: pointer;
+  overflow: hidden;
+  line-height: 0;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Lightbox overlay */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+.gallery-lightbox img {
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  display: block;
+  cursor: default;
+  box-shadow: 0 8px 60px rgba(0,0,0,0.7);
+}
+.gallery-lightbox-close {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: var(--aqua);
+  color: var(--black);
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  font-family: sans-serif;
+}
+
+/* Gallery responsive */
+@media (max-width: 900px) {
+  .gallery-masonry { column-count: 2; }
+  .gallery-hero-title { font-size: 28px; }
+}
+@media (max-width: 560px) {
+  .gallery-masonry { column-count: 1; }
+  .gallery-hero { padding: 36px 1.25rem 32px; }
+}

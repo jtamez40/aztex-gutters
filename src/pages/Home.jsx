@@ -3,6 +3,7 @@ import TopBar from '../components/TopBar'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import gutterImg from '../../assets/images/gutters/4947571930521341008.jpg'
+import servicesImg from '../../assets/images/gutters/4947571930521341005.jpg'
 
 export default function Home() {
   const navigate = useNavigate()
@@ -123,6 +124,15 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SERVICES IMAGE */}
+      <div style={{ lineHeight: 0 }}>
+        <img
+          src={servicesImg}
+          alt="Az-Tex gutter services in San Antonio"
+          style={{ width: '100%', maxHeight: '460px', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
+
       {/* WHY US */}
       <section>
         <div className="why-grid">
@@ -217,6 +227,20 @@ export default function Home() {
           <button className="btn-dark" onClick={() => navigate('/contact')}>Get My Free Estimate</button>
           <button className="btn-white" onClick={() => { window.location.href = 'tel:2104005009' }}>☎ (210) 400-5009</button>
         </div>
+      </div>
+
+      {/* GOOGLE MAP */}
+      <div style={{ lineHeight: 0, borderTop: '3px solid var(--aqua)' }}>
+        <iframe
+          title="Az-Tex Seamless Rain Gutters Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3471.6!2d-98.5735!3d29.4287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c5f1e8a5e0001%3A0x1!2s4730+Pettus+St%2C+San+Antonio%2C+TX+78228!5e0!3m2!1sen!2sus!4v1700000000000"
+          width="100%"
+          height="420"
+          style={{ display: 'block', border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
       </div>
 
       <Footer />
